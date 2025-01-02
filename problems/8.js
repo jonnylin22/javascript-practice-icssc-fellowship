@@ -4,10 +4,14 @@
  * Given a list of numbers, return the average of the list.
  * Use the .reduce function.
  * 
- * @example [1, 2, 3] -> 6
+ * @example [1, 2, 3] -> 2
 */
 function problem(numbers) {
-    return null;
+    const sum = numbers.reduce(function(result, item) {
+        return result + item;
+    }, 0)
+    let avg = sum / numbers.length;
+    return avg;
 }
 
 const tests = [

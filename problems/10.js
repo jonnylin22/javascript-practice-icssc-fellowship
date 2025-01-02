@@ -7,7 +7,20 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    const arr = str.split("");
+    let firsthalf = [];
+    let secondhalf = [];
+    for (let i = 0 ; i < str.length   ; i ++) {
+        if (i < Math.floor(str.length / 2)  ) {
+            firsthalf[i] = arr[i];
+        } else {
+            secondhalf[i] = arr[i];
+        }
+    }
+
+    let first = firsthalf.join('').toUpperCase();
+    let second = secondhalf.join('').toLowerCase();
+    return `${first}${second}`;
 }
 
 const tests = [

@@ -7,6 +7,25 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
+    let candidate = null;
+    let count = 0;
+    for (const num of numbers) {
+        if (count === 0 ) {
+            candidate = num;
+        }
+        count += (num === candidate) ? 1 : -1;
+    }
+
+    count = 0;
+    for (const num of numbers) {
+        if (num === candidate) {
+            count ++;
+        }
+    }
+
+    if (count > Math.floor(numbers.length / 2)) {
+        return candidate;
+    }
     return null;
 }
 

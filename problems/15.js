@@ -11,7 +11,19 @@
  * @example 15 -> [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"]
 */
 function problem(number) {
-    return null;
+    let arr = []
+    for (let i = 0 ; i < number ; i ++) {
+        if ((i+1) % 3 == 0 && (i+1) % 5 ==0 ) {
+            arr[i] = "FizzBuzz";
+        } else if ( (i+1) % 3 == 0) {
+            arr[i] = "Fizz";
+        } else if ((i+1) % 5 == 0) {
+            arr[i] = "Buzz";
+        } else {
+            arr[i] = i+1;
+        }
+    }
+    return arr;
 }
 
 const tests = [

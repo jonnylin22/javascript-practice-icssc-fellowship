@@ -8,7 +8,15 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    const arr = str.split('').reverse();
+    let reversed = arr.map(item => item.replace(/\s+/g, ""));
+    reversed = reversed.join('').toLowerCase(); 
+    let nospaces = str.replace(/\s+/g, "").toLowerCase();
+    let bool = false;
+    if (nospaces == reversed) {
+        bool = true;
+    }  
+    return bool;
 }
 
 const tests = [
